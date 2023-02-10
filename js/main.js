@@ -1,16 +1,22 @@
 /** BÀI 1
- * B1: Tạo Ui
- * B2: Lấy dữ liệu từ input
- * B3: Lập công thức
- *       Tổng lương = lương 1 ngày * số ngày làm
- * B4: Thông báo output
+ * Khối 1: Input
+ *      day   
+ *   
+ * Khối 2: Các bước xử lý
+ *  B1: Lấy giá trị từ form khi người dùng click button
+ *      + Tạo hàm tongLuong
+ *  B2: Trong hàm tongLuong
+ *      + DOM tới thẻ cần lấy dữ liệu của form và lấy value
+ *  B3: Lập công thức
+ *       total = 10000 * day
+ * 
+ * Khối 3: Thông báo output
+ *      total
  */
 
-var perDay = 100000;
-console.log(perDay);
 function tongLuong() {
     var day = document.getElementById("soNgay").value;
-    var total = perDay * day
+    var total = 10000 * day
     document.getElementById("ketQua1").innerHTML = "Tiền lương của nhân viên là:  " + total.toLocaleString() + " VNĐ";
 }
 
@@ -18,49 +24,72 @@ document.getElementById("calc1").onclick = tongLuong;
 
 
 /** BÀI 2
- * B1: Tạo Ui
- * B2: Lấy dữ liệu từ input
- * B3: Lập công thức
- *       Trung bình = 5 số / 5
- * B4: Thông báo output
+ * Khối 1: Input
+ *      num1, num2, num3, num4, num5  
+ * 
+ * Khối 2: Các bước xử lý
+ *  B1: Lấy giá trị từ form khi người dùng click button
+ *      + Tạo hàm tb
+ *  B2: Trong hàm tb
+ *      + DOM tới thẻ cần lấy dữ liệu của form và lấy value
+ *  B3: Lập công thức
+ *       average = (num1 + num2 + num3 + num4 + num5 ) / 5
+ * 
+ * Khối 3: Thông báo output
+ *      average
  */
 
-function dtb() {
+function tb() {
     var num1 = Number(document.getElementById("1st").value);
     var num2 = Number(document.getElementById("2rd").value);
     var num3 = Number(document.getElementById("3th").value);
     var num4 = Number(document.getElementById("4th").value);
     var num5 = Number(document.getElementById("5th").value);
-    var total = (num1 + num2 + num3 + num4 + num5) / 5;
+    var average = (num1 + num2 + num3 + num4 + num5) / 5;
     // var average = total / 5;
-    document.getElementById("ketQua2").innerHTML = "Trung bình cộng của 5 số là:  " + total.toLocaleString();
+    document.getElementById("ketQua2").innerHTML = "Trung bình cộng của 5 số là:  " + average.toLocaleString();
 }
 
-document.getElementById("calc2").onclick = dtb;
+document.getElementById("calc2").onclick = tb;
 
 /** BÀI 3
- * B1: Tạo Ui
- * B2: Lấy dữ liệu từ input
- * B3: Lập công thức
- *       Số tiền sau khi quy đổi = 23.500 * Lượng USD
- * B4: Thông báo output
+ * Khối 1: Input
+ *      usd  
+ * 
+ * Khối 2: Các bước xử lý
+ *  B1: Lấy giá trị từ form khi người dùng click button
+ *      + Tạo hàm exchange
+ *  B2: Trong hàm exchange
+ *      + DOM tới thẻ cần lấy dữ liệu của form và lấy value
+ *  B3: Lập công thức
+ *       total = 23500 * usd
+ * 
+ * Khối 3: Thông báo output
+ *      total
  */
 
-var rate = 23500;
 function exchange() {
     var usd = document.getElementById("money").value;
-    var total = rate * usd;
+    var total = 235000 * usd;
     document.getElementById("ketQua3").innerHTML = "Số tiền VNĐ sau khi quy đổi là:  " + total.toLocaleString() + " VNĐ";
 }
 document.getElementById("calc3").onclick = exchange;
 
 /** BÀI 4
- * B1: Tạo Ui
- * B2: Lấy dữ liệu từ input
- * B3: Lập công thức
- *       Diện tích HCN: Dài * Rộng
- *       Chu vi HCN: (Dài + rộng) * 2
- * B4: Thông báo output
+ * Khối 1: Input
+ *      length, width  
+ * 
+ * Khối 2: Các bước xử lý
+ *  B1: Lấy giá trị từ form khi người dùng click button
+ *      + Tạo hàm SC
+ *  B2: Trong hàm SC
+ *      + DOM tới thẻ cần lấy dữ liệu của form và lấy value
+ *  B3: Lập công thức
+ *       S = length * width
+ *       C = (length + width) * 2
+ * 
+ * Khối 3: Thông báo output
+ *      S, C
  */
 
 function SC() {
@@ -72,13 +101,22 @@ function SC() {
 }
 document.getElementById("calc4").onclick = SC;
 
+
 /** BÀI 5
- * B1: Tạo Ui
- * B2: Lấy dữ liệu từ input
- * B3: Lập công thức
- *       Tách phần chục: số / 10 (Lấy phần nguyên)
- *       Tách phần đơn vị: số % 10 (Lấy phần nguyên)
- * B4: Thông báo output
+ * Khối 1: Input
+ *      num  
+ * 
+ * Khối 2: Các bước xử lý
+ *  B1: Lấy giá trị từ form khi người dùng click button
+ *      + Tạo hàm sum
+ *  B2: Trong hàm sum
+ *      + DOM tới thẻ cần lấy dữ liệu của form và lấy value
+ *  B3: Lập công thức
+ *       hangChuc = Math.floor(num / 10)
+ *       hangDv = Math.floor(num % 10)
+ *       tong = hangChuc + hangDv
+ * Khối 3: Thông báo output
+ *      tong
  */
 
 function sum() {
